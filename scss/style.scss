@@ -4,6 +4,220 @@
 @import "settings";
 
 
+.header {
+	position: relative;
+	height: 100vh;
+	.road_to_la {
+		stroke-dashoffset: 600;
+		stroke-dasharray: 600;
+		animation: dash-anim 4s infinite 5.5s;
+	}
+	@keyframes dash-anim {
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
+	&__map {
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 3;
+	}
+	&__title {
+		font-weight: 800;
+		font-size: 200px;
+		line-height: 156px;
+		text-transform: uppercase;
+		opacity: 0.09;	
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 3;
+		color: #fff;
+		max-width: 467px;
+		user-select: none;
+		span {
+			display: block;
+		}
+	}
+	&-aside {
+		color: #fff;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		max-width: 168px;
+		width: 100%;
+		border-right: 2px solid rgba(#fff, 0.5);
+		z-index: 5;
+		text-align: center;
+	}
+	&-menu {
+		margin-top: 40px;
+		&__list {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+		&__item {
+			margin-bottom: 22px;
+		}
+		&__link {
+			color: #fff;
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 14px;
+			letter-spacing: 3px;
+			span {
+				display: block;
+				margin-top: 3px;
+			}
+		}
+	}
+	&__date {
+		font-weight: 800;
+		font-size: 72px;
+		line-height: 64px;
+		margin-bottom: 24px;
+		span {
+			display: block;
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 19px;
+			text-align: center;
+			letter-spacing: 1.4px;
+			opacity: 0.5;
+			padding-top: 7px;
+		}
+	}
+	&__search {
+		margin-bottom: 21px;
+		margin-top: 21px;
+	}
+	&__location {
+		display: inline-block;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 19px;
+		letter-spacing: 1.4px;
+		position: relative;
+		padding-left: 19px;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 11px;
+			height: 13px;
+			left: 0;
+			top: 1px;
+			background: url('../img/location.svg');
+
+
+		}
+	}
+	&__doublearrow {
+		position: absolute;
+		left: 210px;
+		bottom: 30px;
+		z-index: 3;
+
+
+	}
+}
+
+
+.header-slider {
+
+	&__item {
+		height: 100vh;
+		background: url('../img/header-bg.jpg') center/cover no-repeat; 
+		position: relative;
+	}
+
+	&__info {
+		position: absolute;
+		right: 80px;
+		bottom: 120px;
+		text-align: right;
+		color: #fff;
+		text-transform: uppercase;
+		z-index: 4;
+	}
+
+	&__title {
+		font-weight: 800;
+		font-size: 80px;
+		line-height: 86px;
+		margin-bottom: 48px;	
+	}
+
+	&__subtitle {
+		margin-bottom: 5px;
+	}
+
+	&__subtext {
+		margin-bottom: 8px;
+	}
+
+	&__text {
+		font-weight: 800;
+		font-size: 40px;
+		line-height: 48px;
+		margin-bottom: 8px;
+	}
+
+
+
+
+}
+
+.slick-arrow {
+	position: absolute;
+	top: 40px;
+	z-index: 4;
+	cursor: pointer;
+}
+
+.next-arrow {
+	right: 80px;
+
+}
+
+.prev-arrow {
+	right: 125px;
+}
+
+
+.dots {
+	max-width: 920px;
+	width: 100%;
+	right: 54px;
+	position: absolute;
+	bottom: 34px;
+	color: #fff;
+	.slick-current .dots-wrapper {
+		border-color: $green
+	}
+	&-wrapper {
+		width: 200px;
+		height: 28px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-top: 4px solid #fff;
+		padding-top: 6px;
+		&__num {
+			font-size: 24px;
+			line-height: 34px;
+			font-weight: 800;
+
+		}
+		&__name {
+			font-weight: 300;
+			line-height: 19px;
+
+		}
+	}
+}
 
 .surf {
 	background: url('../img/point-big.svg') right 150px no-repeat;
